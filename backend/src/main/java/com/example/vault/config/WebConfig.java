@@ -14,13 +14,14 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://lockpasswords.netlify.app/api")
+                        .allowedOrigins("https://lockpasswords.netlify.app/")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
                         .allowedHeaders("*");
             }
         };
     }
 }
+
 
 
 
