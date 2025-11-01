@@ -19,7 +19,7 @@ public class User {
     private String email;
 
     @Column(nullable=false)
-    private String password; // BCrypt hashed
+    private String password;
 
     private Instant createdAt = Instant.now();
 }
