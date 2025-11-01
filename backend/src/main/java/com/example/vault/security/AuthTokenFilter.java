@@ -37,7 +37,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 
         String path = request.getRequestURI();
 
-        // ✅ Skip filter for login and register
+     
         if (path.startsWith("/api/auth/register") || path.startsWith("/api/auth/login")) {
             filterChain.doFilter(request, response);
             return;
@@ -53,7 +53,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(auth);
             }
         } catch (Exception e) {
-            // ignore or log if needed
+          
         }
 
         filterChain.doFilter(request, response);
